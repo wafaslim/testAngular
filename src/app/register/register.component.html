@@ -1,0 +1,33 @@
+<h4>register</h4>
+<form [formGroup]= "registerForm">
+
+    <mat-form-field appearance="fill">
+       <mat-label>Email</mat-label>
+       <input matInput placeholder="Email" formControlName="email">
+       <mat-error *ngIf="registerForm.controls.email.invalid">email is required</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>password1</mat-label>
+        <input matInput placeholder="Password1" formControlName="password1">
+        <mat-error *ngIf="registerForm.controls.password1.errors?.required">name is required</mat-error>
+        <mat-error *ngIf="registerForm.controls.password1.errors?.minLength">at least 3 characters</mat-error>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>password2</mat-label>
+        <input matInput placeholder="Password2" formControlName="password2">
+        <mat-error *ngIf="registerForm.controls.password2.errors?.required">name is required</mat-error>
+        <mat-error *ngIf="registerForm.controls.password2.errors?.minLength">at least 3 characters</mat-error>
+    </mat-form-field>
+    <br>
+
+    <section>
+        <div >
+              <button mat-raised-button >Sign Up</button>
+        </div>
+      </section>
+
+</form>
+<!-- <p>Form Status: {{ userForm.status }}</p>  -->

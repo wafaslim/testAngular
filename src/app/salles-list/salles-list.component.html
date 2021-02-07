@@ -1,0 +1,9 @@
+<!-- <p>salles-list works!</p> -->
+<form >
+    <fieldset>
+        <ul *ngFor="let salle of salles" >
+           <li>{{salle.nom}}</li><a [routerLink]="['/salle',salle.id]">Details</a>
+
+        </ul>
+    </fieldset>
+</form>

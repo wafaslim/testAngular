@@ -1,0 +1,26 @@
+<h4>Login</h4>
+<form [formGroup]= "loginForm">
+
+    <mat-form-field appearance="fill">
+       <mat-label>Email</mat-label>
+       <input matInput placeholder="Email" formControlName="email">
+       <mat-error *ngIf="loginForm.controls.email.invalid">email is required</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>password</mat-label>
+        <input matInput placeholder="Password" formControlName="password">
+        <mat-error *ngIf="loginForm.controls.password.errors?.required">name is required</mat-error>
+        <mat-error *ngIf="loginForm.controls.password.errors?.minLength">at least 3 characters</mat-error>
+    </mat-form-field>
+    <br>
+
+    <section>
+        <div >
+              <button mat-raised-button (click)='verifier()'>Login</button>
+        </div>
+      </section>
+
+</form>
+<!-- <p>Form Status: {{ userForm.status }}</p>  -->
+
