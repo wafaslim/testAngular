@@ -11,5 +11,7 @@ export class UpDateComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+modifier(){
+  
+}
 }

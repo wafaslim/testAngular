@@ -1,13 +1,14 @@
 <p>list des publications</p>
-form >
+<form >
     <fieldset>
-        <ul *ngFor="let pub of pubs" >
+        <ul *ngFor="let pub of pubs index as i" >
            <li>{{pub.titre}}</li>
            <li>{{pub.description}}</li>
            <li>{{pub.categorie}}</li>
-           <li>{{date</li>
-           <!-- <a [routerLink]="['/salle',salle.id]">Details</a> -->
-
+           <li>{{pub.date}}</li>
+           <button (click)="delete(i)">supprimer</button>
+           <button (click)="detail(i)">modifier</button>
+           
         </ul>
     </fieldset>
 </form>

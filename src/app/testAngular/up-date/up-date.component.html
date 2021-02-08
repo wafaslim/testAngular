@@ -1,1 +1,28 @@
-<p>up-date works!</p>
+<h4>UPDATE PUB</h4>
+<form [formGroup]='pubForm'>
+    <div>
+<input type="text" placeholder='Titre:' formControlName='titre'>
+</div>
+<br>
+<div>
+<input type="text" placeholder='Description:' formControlName='description' >
+</div>
+<br>
+<div>
+<label for="categorie">Categorie</label>
+
+<select name="categorie" formControlName='categorie' >
+  <option value="sport">Sport</option>
+  <option value="technologies">Technologies</option>
+  <option value="economie">Economie</option>
+  <option value="societe">Societe</option>
+  <option value="culture">Culture</option>
+</select>
+</div>
+<br>
+<div>
+<input type="date" placeholder="date" formControlName='date'>
+</div>
+<br>
+<button (click)="modifier()">Done</button>
+</form>

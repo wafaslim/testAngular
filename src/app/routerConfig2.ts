@@ -1,19 +1,26 @@
 import { Routes } from "@angular/router";
 import { ErrorsComponent } from './components/errors/errors.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { AddPostComponent } from './testAngular/add-post/add-post.component';
+import { ListPostComponent } from './testAngular/list-post/list-post.component';
+import { UpDateComponent } from './testAngular/up-date/up-date.component';
+// import { LoginComponent } from './login/login.component';
+// import { RegisterComponent } from './register/register.component';
 
 const appRoutes: Routes = [
     {path:'',
-     component:LoginComponent
+     component:AddPostComponent
 
     },
-    {path:'login',
-     component:LoginComponent
+    {path:'listPost',
+     component:ListPostComponent
+
+    },
+    {path:'addPost',
+     component:AddPostComponent
     },
 
-    {path:'register',
-     component:RegisterComponent
+    {path:'listPost/update/:titre',
+     component:UpDateComponent
 
     },
     // {
