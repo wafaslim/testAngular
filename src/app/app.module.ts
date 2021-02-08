@@ -6,7 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
-import appRoutes from './routerConfig';
+import appRoutes from './routerConfig2';
 import {ErrorsComponent}from './components/errors/errors.component';
 import { SallesListComponent } from './salles-list/salles-list.component';
 import { SalleComponent } from './salle/salle.component';
@@ -22,6 +22,11 @@ import { RegisterComponent } from './register/register.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import { ListPostComponent } from './testAngular/list-post/list-post.component';
+import { AddPostComponent } from './testAngular/add-post/add-post.component';
+import { UpDateComponent } from './testAngular/up-date/up-date.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +42,10 @@ import { MatInputModule } from '@angular/material/input';
     NavbarComponent,
     AddArticleComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ListPostComponent,
+    AddPostComponent,
+    UpDateComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(appRoutes),
@@ -45,7 +53,8 @@ import { MatInputModule } from '@angular/material/input';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

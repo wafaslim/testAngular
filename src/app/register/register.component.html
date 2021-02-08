@@ -6,6 +6,7 @@
        <input matInput placeholder="Email" formControlName="email">
        <mat-error *ngIf="registerForm.controls.email.invalid">email is required</mat-error>
     </mat-form-field>
+    <br>
     
     <mat-form-field appearance="fill">
         <mat-label>password1</mat-label>
@@ -25,7 +26,7 @@
 
     <section>
         <div >
-              <button mat-raised-button >Sign Up</button>
+              <button mat-raised-button (click)="register()">Sign Up</button>
         </div>
       </section>
 
